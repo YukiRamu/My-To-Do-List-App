@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My To Do List</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
+  <!--Icon: fontawesome-->
+  <script src="https://kit.fontawesome.com/a62f436beb.js" crossorigin="anonymous"></script>
+  <!--CSS and icon link-->
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/x-icon" href="./icon.JPG">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1><i class="fas fa-clipboard-list"></i>My <span>To Do</span> List</h1>
+    <form id="toDoForm">
+      <div>
+        <label for="item">Item</label>
+        <input type="text" id="item" placeholder="What needs to be done?">
+      </div>
+
+      <div>
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+
+      <input type="submit" value="Add" id="submit">
+
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>To Do</th>
+          <th>Priority</th>
+          <th><i class="far fa-trash-alt"></i></th>
+        </tr>
+      </thead>
+      <tbody id="itemTable">
+        <!-- html will be inserted here -->
+        <tr>
+          <th>item1</th>
+          <th>item2</th>
+          <th><button type="button"><i class="far fa-trash-alt"></i></button></th>
+        </tr>
+        <tr>
+          <th>item1</th>
+          <th>item2</th>
+          <th><button type="button"><i class="far fa-trash-alt"></i></button></th>
+        </tr>
+        <tr>
+          <th>item1</th>
+          <th>item2</th>
+          <th><button type="button"><i class="far fa-trash-alt"></i></button></th>
+        </tr>
+         <!-- html will be inserted here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
