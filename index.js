@@ -1,7 +1,7 @@
 /* Variables */
 const itemText = document.getElementById("item");
 const priority = document.getElementById("priority");
-const submitBtn = document.getElementById("submit");
+const addBtn = document.getElementById("add");
 const itemTable = document.getElementById("itemTable");
 
 /* Class */
@@ -15,9 +15,8 @@ class Item {
 
 //action
 class UI {
-  //methods : display item from local storage
-  //************ need to be Static? */
-  displayItem = () => {
+  //methods : display item from local storage when the page is loaded
+  static displayItem = () => {
     //test data
     const items = [{
       item: "shopping",
@@ -31,11 +30,13 @@ class UI {
       item: "laundry",
       priority: "low"
     }]
-
     //#1: get the data from localstorage and assign it to itemArray
     const itemArray = items; // will be changed to getting from local storage
+    UI.createHTML(itemArray);
+  }
 
-    //#2: create HTML
+  //#2: create HTML
+  static createHTML = (itemArray) => {
     const html = itemArray.map((elem) => {
       return `
         <tr>
@@ -47,14 +48,25 @@ class UI {
     }).join("");
 
     itemTable.innerHTML = html;
+    return itemArray;
   }
+
 }
 
-//store items
+//When the window is loaded - > display current to do items
+document.addEventListener("DOMContentLoaded", UI.displayItem);
 
 //Add button - > display to do items
-//create an instance
-const displayItem = new UI();
-displayItem.displayItem();
+addBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  //instantiate item
+  const item = new Item(itemText.value, priority.value);
+  console.log(item)
+
+});
+
+//store items
+//localStorage.setItem("toDoItem", JSON.stringify(itemArray));
 
 //Delete button - > delete the row
