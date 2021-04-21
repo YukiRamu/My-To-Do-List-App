@@ -39,7 +39,6 @@ class UI {
       /* ================== Exception Handling ================== */
     } else {
       //Normal case
-      console.log("hihi ")
       UI._itemArray.unshift(itemObj); // add a new item into itemArray
       UI.createHTML(UI._itemArray);
     }
@@ -47,21 +46,22 @@ class UI {
   }
 
   //#2: create HTML
-  static createHTML = (itemArray) => {
+  static createHTML = (itemArrayParam) => {
 
     //when the page is first loaded, no item is stored in the localStorage. itemArray is empty
-    if (itemArray.length !== 0) {
-      const html = itemArray.map((elem) => {
+    if (itemArrayParam.length !== 0) {
+      const html = itemArrayParam.map((elem) => {
         return `
           <tr>
+            <th>${itemArrayParam.indexOf(elem) + 1}</th>
             <th>${elem._item}</th>
             <th>${elem._priority}</th>
-            <th><button type="button"><i class="far fa-trash-alt"></i></button></th>
+            <th><i class="far fa-trash-alt delete"></i></th>
           </tr>
           `
       }).join("");
       itemTable.innerHTML = html;
-      UI.storeItem(itemArray);
+      UI.storeItem(itemArrayParam);
     }
 
   }
@@ -69,8 +69,28 @@ class UI {
   //#3 store the itemArray to localStorage
   static storeItem = (itemArray) => {
     localStorage.setItem("toDoItem", JSON.stringify(itemArray));
-    console.log(localStorage);
   }
+
+  //#4 clear user input fields
+  static clearInput = () => {
+    itemText.value = "";
+    priority.value = "";
+  }
+
+  //#5 delete item
+  static deleteItem = (target) => {
+
+    if (target.className.includes("delete")) {
+      target.parentElement.parentElement.remove(); //Remove element from DOM
+
+      const targetIndex = target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent - 1; //find the index of array (= item No.)
+
+      UI._itemArray.splice(targetIndex, 1);//delete target from itemArray
+      UI.storeItem(UI._itemArray); //store the latest itemArray into localStorage
+
+    }
+  }
+
 }
 
 //When the window is loaded - > display current to do items
@@ -84,8 +104,7 @@ addBtn.addEventListener("click", (e) => {
   if ((itemText.value === "") || (priority.value === "")) {
     alert("Input both to do item and priority");
     //clear input
-    itemText.value = "";
-    priority.value = "";
+    UI.clearInput();
     return false;
   }
   //instantiate item
@@ -95,9 +114,11 @@ addBtn.addEventListener("click", (e) => {
   UI.displayItem(item);
 
   //clear input
-  itemText.value = "";
-  priority.value = "";
+  UI.clearInput();
 
 });
 
 //Delete button - > delete the row
+itemTable.addEventListener("click", (event) => {
+  UI.deleteItem(event.target); //target property can grab one part of element from the entire set of elements
+})
