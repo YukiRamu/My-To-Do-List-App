@@ -47,7 +47,7 @@ body .container form .form-group .priority {
   font-family: "Dancing Script", cursive;
 }
 
-body .container form .priorityForm {
+body .container form #priorityForm {
   margin-bottom: 0;
 }
 
