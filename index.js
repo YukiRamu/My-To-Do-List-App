@@ -2,7 +2,7 @@
 /* Variables */
 const itemText = document.getElementById("item");
 const priority = document.getElementById("priority");
-const addBtn = document.getElementById("add");
+const addBtn = document.querySelector(".add");
 const itemTable = document.getElementById("itemTable");
 
 /* Class */
