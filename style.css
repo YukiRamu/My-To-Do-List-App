@@ -64,7 +64,6 @@ body .container .toDoForm .btn {
   -webkit-box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
           box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
   background: #fc919f;
-  font-family: "Dancing Script", cursive;
 }
 
 body .container .toDoForm .btn:hover {
