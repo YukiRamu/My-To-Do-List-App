@@ -1,0 +1,97 @@
+/* Colors */
+$color1: #fcecdd;
+$color2: rgb(252, 145, 159);
+$color3: rgb(32, 79, 169);
+$color4: rgba(39, 179, 194);
+
+$bgColor1: rgba(254, 210, 135, 0.7);
+$bgColor2: rgb(254, 147, 139, 0.7);
+
+$bgColor3: rgb(246, 162, 100, 0.8);
+$bgColor4: rgb(240, 119, 102, 0.8);
+
+body {
+  background: url(./img/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, $bgColor1, $bgColor2);
+    border-radius: 2vw;
+    box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
+    //header
+    .jumbotron {
+      padding: (1.5rem 1.5rem);
+      margin: 2rem auto;
+      background-color: unset;
+      color: white;
+      h1 {
+        font-family: "Dancing Script", cursive;
+        text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898,
+          -0.3rem 0.8rem 0.1rem #929191;
+        .glyphicon {
+          padding-right: 1rem;
+          font-size: 4rem;
+          color: $color4;
+        }
+        .accent {
+          color: $color4;
+        }
+      }
+    }
+    //form
+    .toDoForm {
+      margin: 1rem auto;
+      .form-group {
+        .control-label,
+        .priority {
+          font-size: 2.5rem;
+          font-family: "Dancing Script", cursive;
+        }
+      }
+      .priorityForm {
+        margin-bottom: 0;
+      }
+      .alert {
+        display: none;
+        font-size: 1.3rem;
+        padding: 0.5rem;
+      }
+      .btn {
+        margin-top: 1rem;
+        border: none;
+        color: $color1;
+        box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
+        background: $color2;
+        font-family: "Dancing Script", cursive;
+        &:hover {
+          transform: translateY(-0.5rem);
+        }
+        &:active {
+          transform: translateY(0.5rem);
+          box-shadow: none;
+          color: unset;
+        }
+      }
+    }
+    .panel {
+      thead {
+        background: linear-gradient(top, $bgColor3, $bgColor4);
+        font-size: 1.5rem;
+      }
+      tbody {
+        font-size: 1.3rem;
+        .delete {
+          color: $color4;
+          &:hover {
+            transform: scale(1.5);
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+}

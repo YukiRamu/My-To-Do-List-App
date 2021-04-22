@@ -1,0 +1,104 @@
+/* Colors */
+body {
+  background: url(./img/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+}
+
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, rgba(254, 210, 135, 0.8), #fe938b);
+  border-radius: 2vw;
+  -webkit-box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
+          box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
+}
+
+body .container .jumbotron {
+  padding: 1.5rem 1.5rem;
+  margin: 2rem auto;
+  background-color: unset;
+  color: white;
+}
+
+body .container .jumbotron h1 {
+  font-family: "Dancing Script", cursive;
+  text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898, -0.3rem 0.8rem 0.1rem #929191;
+}
+
+body .container .jumbotron h1 .glyphicon {
+  padding-right: 1rem;
+  font-size: 4rem;
+  color: rgba(39, 179, 194, 0.8);
+}
+
+body .container .jumbotron h1 .accent {
+  color: rgba(39, 179, 194, 0.8);
+}
+
+body .container .toDoForm {
+  margin: 1rem auto;
+}
+
+body .container .toDoForm .form-group .control-label,
+body .container .toDoForm .form-group .priority {
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+body .container .toDoForm .priorityForm {
+  margin-bottom: 0;
+}
+
+body .container .toDoForm .alert {
+  display: none;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
+body .container .toDoForm .btn {
+  margin-top: 1rem;
+  border: none;
+  color: #fcecddda;
+  -webkit-box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
+          box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
+  background: #fc919f;
+  font-family: "Dancing Script", cursive;
+}
+
+body .container .toDoForm .btn:hover {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+body .container .toDoForm .btn:active {
+  -webkit-transform: translateY(0.5rem);
+          transform: translateY(0.5rem);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: unset;
+}
+
+body .container .panel thead {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6a264), to(#f07766));
+  background: linear-gradient(top, #f6a264, #f07766);
+  font-size: 1.5rem;
+}
+
+body .container .panel tbody {
+  font-size: 1.3rem;
+}
+
+body .container .panel tbody .delete {
+  color: rgba(39, 179, 194, 0.8);
+}
+
+body .container .panel tbody .delete:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #fc919f;
+}
+/*# sourceMappingURL=style.css.map */

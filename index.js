@@ -84,8 +84,13 @@ class UI {
       target.parentElement.parentElement.remove(); //Remove element from DOM
 
       const targetIndex = target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent - 1; //find the index of array (= item No.)
-
+      console.log("target index is ", targetIndex);
       UI._itemArray.splice(targetIndex, 1);//delete target from itemArray
+      console.log("UI._itemArray ", UI._itemArray)
+
+      //reload the page to update item No.
+      window.location.reload();
+
       UI.storeItem(UI._itemArray); //store the latest itemArray into localStorage
 
     }

@@ -8,30 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Icon: fontawesome-->
   <script src="https://kit.fontawesome.com/a62f436beb.js" crossorigin="anonymous"></script>
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@300&display=swap"
+    rel="stylesheet">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
   <!--CSS and icon link-->
   <link rel="stylesheet" href="./reset.css" />
   <link rel="stylesheet" href="./style.css" />
-  <link rel="icon" type="image/x-icon" href="./icon.JPG">
+  <link rel="icon" type="image/x-icon" href="./img/icon.JPG">
 
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1><span class="glyphicon glyphicon-list" aria-hidden="true"></span>My <span>To Do</span> List</h1>
+      <h1><span class="glyphicon glyphicon-list" aria-hidden="true"></span>My <span class="accent">To Do</span> List
+      </h1>
     </div>
 
-    <form id="toDoForm">
+    <form id="toDoForm" class="toDoForm">
       <div class="form-group">
-        <label for="item" class="control-label">Item</label>
+        <label for="item" class="control-label">Item:</label>
         <input type="text" class="form-control" id="item" placeholder="What needs to be done?">
       </div>
 
-      <div class="form-group">
-        <label for="priority">Priority</label>
+      <div class="form-group priorityForm">
+        <label for="priority" class="priority">Priority:</label>
         <select name="priority" class="form-control" id="priority">
           <option value=""></option>
           <option value="High">High</option>
@@ -40,8 +45,10 @@
         </select>
       </div>
 
-      <div class="alert alert-danger" role="alert"><span class="glyphicon glyphicon-exclamation-sign"
-          aria-hidden="true"></span>Input both To-do item and priority</div>
+      <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        Input both To-do item and priority
+      </div>
 
       <input type="submit" class="btn btn-default" value="Add" id="add">
     </form>
