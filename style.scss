@@ -2,13 +2,14 @@
 $color1: #fcecdd;
 $color2: rgb(252, 145, 159);
 $color3: rgb(32, 79, 169);
-$color4: rgba(39, 179, 194);
+$color4: rgb(39, 179, 194);
+$white: white;
 
-$bgColor1: rgba(254, 210, 135, 0.7);
-$bgColor2: rgb(254, 147, 139, 0.7);
+$bgColor1: rgba(254, 210, 135, 0.75);
+$bgColor2: rgba(254, 147, 139, 0.75);
 
-$bgColor3: rgb(246, 162, 100, 0.8);
-$bgColor4: rgb(240, 119, 102, 0.8);
+$bgColor3: rgba(246, 162, 100, 0.8);
+$bgColor4: rgba(240, 119, 102, 0.8);
 
 body {
   background: url(./img/bg.jpg) no-repeat center center fixed;
@@ -27,7 +28,7 @@ body {
       padding: (1.5rem 1.5rem);
       margin: 2rem auto;
       background-color: unset;
-      color: white;
+      color: $white;
       h1 {
         font-family: "Dancing Script", cursive;
         text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898,
@@ -81,6 +82,7 @@ body {
       thead {
         background: linear-gradient(top, $bgColor3, $bgColor4);
         font-size: 1.5rem;
+        color: $white;
       }
       tbody {
         font-size: 1.3rem;
@@ -91,6 +93,20 @@ body {
             color: $color2;
           }
         }
+      }
+    }
+  }
+  //footer
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 0.5em 0;
+    h4 > a {
+      color: $color3;
+      &:hover {
+        color: $color2;
       }
     }
   }

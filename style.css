@@ -11,7 +11,7 @@ body .container {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: linear-gradient(45deg, rgba(254, 210, 135, 0.8), #fe938b);
+  background: linear-gradient(45deg, rgba(254, 210, 135, 0.75), rgba(254, 147, 139, 0.75));
   border-radius: 2vw;
   -webkit-box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
           box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
@@ -32,11 +32,11 @@ body .container .jumbotron h1 {
 body .container .jumbotron h1 .glyphicon {
   padding-right: 1rem;
   font-size: 4rem;
-  color: rgba(39, 179, 194, 0.8);
+  color: #27b3c2;
 }
 
 body .container .jumbotron h1 .accent {
-  color: rgba(39, 179, 194, 0.8);
+  color: #27b3c2;
 }
 
 body .container .toDoForm {
@@ -62,7 +62,7 @@ body .container .toDoForm .alert {
 body .container .toDoForm .btn {
   margin-top: 1rem;
   border: none;
-  color: #fcecddda;
+  color: #fcecdd;
   -webkit-box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
           box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
   background: #fc919f;
@@ -83,9 +83,10 @@ body .container .toDoForm .btn:active {
 }
 
 body .container .panel thead {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f6a264), to(#f07766));
-  background: linear-gradient(top, #f6a264, #f07766);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 162, 100, 0.8)), to(rgba(240, 119, 102, 0.8)));
+  background: linear-gradient(top, rgba(246, 162, 100, 0.8), rgba(240, 119, 102, 0.8));
   font-size: 1.5rem;
+  color: white;
 }
 
 body .container .panel tbody {
@@ -93,12 +94,29 @@ body .container .panel tbody {
 }
 
 body .container .panel tbody .delete {
-  color: rgba(39, 179, 194, 0.8);
+  color: #27b3c2;
 }
 
 body .container .panel tbody .delete:hover {
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+  color: #fc919f;
+}
+
+body .footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  padding: 0.5em 0;
+}
+
+body .footer h4 > a {
+  color: #204fa9;
+}
+
+body .footer h4 > a:hover {
   color: #fc919f;
 }
 /*# sourceMappingURL=style.css.map */
