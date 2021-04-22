@@ -107,6 +107,10 @@ body .footer {
   padding: 0.5em 0;
 }
 
+body .footer h4 {
+  font-size: 1rem;
+}
+
 body .footer h4 > a {
   color: #204fa9;
 }
