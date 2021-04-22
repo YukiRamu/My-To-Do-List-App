@@ -16,10 +16,9 @@ body {
   background-size: cover;
   font-family: "Nunito", sans-serif;
   .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 2rem auto;
+    min-height: 100vh;
+    max-width: 90vw;
     background: linear-gradient(45deg, $bgColor1, $bgColor2);
     border-radius: 2vw;
     box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
@@ -98,10 +97,8 @@ body {
   }
   //footer
   .footer {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
+    text-align: center;
+    width: 100%;
     padding: 0.5em 0;
     h4 > a {
       color: $color3;

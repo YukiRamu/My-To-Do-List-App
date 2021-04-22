@@ -6,11 +6,9 @@ body {
 }
 
 body .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: 2rem auto;
+  min-height: 100vh;
+  max-width: 90vw;
   background: linear-gradient(45deg, rgba(254, 210, 135, 0.75), rgba(254, 147, 139, 0.75));
   border-radius: 2vw;
   -webkit-box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
@@ -104,11 +102,8 @@ body .container .panel tbody .delete:hover {
 }
 
 body .footer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  text-align: center;
+  width: 100%;
   padding: 0.5em 0;
 }
 
