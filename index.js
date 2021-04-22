@@ -104,7 +104,8 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 
 //Add button - > display to do items
 addBtn.addEventListener("click", (e) => {
-  e.preventDefault();  //************ for form tag in html
+  // e.preventDefault();  //************ for form tag in html
+  e.stopImmediatePropagation();
 
   //validation check for user input
   if ((itemText.value === "") || (priority.value === "")) {
