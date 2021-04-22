@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 
 //Add button - > display to do items
 addBtn.addEventListener("click", (e) => {
-  //e.preventDefault();  //************for form control/
+  e.preventDefault();  //************ for form tag in html
 
   //validation check for user input
   if ((itemText.value === "") || (priority.value === "")) {
