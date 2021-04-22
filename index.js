@@ -4,6 +4,7 @@ const itemText = document.getElementById("item");
 const priority = document.getElementById("priority");
 const addBtn = document.querySelector(".add");
 const itemTable = document.getElementById("itemTable");
+$('.btn').button();
 
 /* Class */
 //item

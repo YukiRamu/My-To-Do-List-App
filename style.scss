@@ -43,7 +43,7 @@ body {
       }
     }
     //form
-    .toDoForm {
+    form {
       margin: 1rem auto;
       .form-group {
         .control-label,
@@ -73,7 +73,8 @@ body {
         &:active {
           transform: translateY(0.5rem);
           box-shadow: none;
-          color: unset;
+          color: $color2;
+          background-color: $white;
         }
       }
     }
