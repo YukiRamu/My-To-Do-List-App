@@ -36,7 +36,7 @@
         <input type="text" class="form-control" id="item" placeholder="What needs to be done?">
       </div>
 
-      <div class="form-group" id="priorityForm">
+      <!-- <div class="form-group" id="priorityForm">
         <label for="priority" class="priority">Priority:</label>
         <select name="priority" class="form-control" id="priority">
           <option value=""></option>
@@ -44,14 +44,21 @@
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
         </select>
+      </div> -->
+      <div class="form-group">
+        <label for="priority" class="form-label">Priority</label>
+        <input class="form-control" list="datalistOptions" id="priority" placeholder="Type to choose...">
+        <datalist id="datalistOptions">
+          <option value="High">
+          <option value="Medium">
+          <option value="Low">
+        </datalist>
       </div>
 
       <div class="alert alert-danger fade in" role="alert">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         Input both To-do item and priority
       </div>
-
-      <input type="hidden" name="hidden" class="form-control" id="hidden">
 
       <!-- <input type="button" class="btn btn-default add" value="Add"> -->
       <button type="submit" class="btn btn-default" id="add">Add</button>

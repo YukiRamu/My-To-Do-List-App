@@ -46,14 +46,12 @@ body {
     form {
       margin: 1rem auto;
       .form-group {
+        margin-bottom: 0;
         .control-label,
-        .priority {
+        .form-label {
           font-size: 2.5rem;
           font-family: "Dancing Script", cursive;
         }
-      }
-      #priorityForm {
-        margin-bottom: 0;
       }
       .alert {
         display: none;
