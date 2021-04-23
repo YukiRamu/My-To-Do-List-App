@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 // }
 
 addBtn.addEventListener("click", (e) => {
- // alert("add button is clicked");
+  alert("add button is clicked");
   // e.preventDefault();  //************ for form tag in html to log the result in the console
   //e.stopImmediatePropagation();
 
