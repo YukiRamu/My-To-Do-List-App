@@ -104,6 +104,7 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 
 //Add button - > display to do items
 addBtn.addEventListener("click", (e) => {
+  alert("add button is clicked");
   // e.preventDefault();  //************ for form tag in html
   e.stopImmediatePropagation();
 
