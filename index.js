@@ -104,33 +104,33 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 
 //Add button - > display to do items
 
-const test = () => {
-  alert("Add button is clicked");
+// const test = () => {
+//   alert("Add button is clicked");
 
-}
+// }
 
-// addBtn.addEventListener("click", (e) => {
-//   alert("add button is clicked");
-//   // e.preventDefault();  //************ for form tag in html
-//   e.stopImmediatePropagation();
+addBtn.addEventListener("click", (e) => {
+  alert("add button is clicked");
+  // e.preventDefault();  //************ for form tag in html
+  e.stopImmediatePropagation();
 
-//   //validation check for user input
-//   if ((itemText.value === "") || (priority.value === "")) {
-//     alert("Input both to do item and priority");
-//     //clear input
-//     UI.clearInput();
-//     return false;
-//   }
-//   //instantiate item
-//   const item = new Item(itemText.value, priority.value);
+  //validation check for user input
+  if ((itemText.value === "") || (priority.value === "")) {
+    alert("Input both to do item and priority");
+    //clear input
+    UI.clearInput();
+    return false;
+  }
+  //instantiate item
+  const item = new Item(itemText.value, priority.value);
 
-//   //add an item to itemArray
-//   UI.displayItem(item);
+  //add an item to itemArray
+  UI.displayItem(item);
 
-//   //clear input
-//   UI.clearInput();
+  //clear input
+  UI.clearInput();
 
-// });
+});
 
 //Delete button - > delete the row
 itemTable.addEventListener("click", (event) => {
