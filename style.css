@@ -8,32 +8,29 @@ body {
 body .container {
   margin: 2rem auto;
   min-height: 100vh;
-  max-width: 90vw;
+  max-width: 80vw;
   background: linear-gradient(45deg, rgba(254, 210, 135, 0.75), rgba(254, 147, 139, 0.75));
   border-radius: 2vw;
   -webkit-box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
           box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
 }
 
-body .container .jumbotron {
-  padding: 1.5rem 1.5rem;
-  margin: 2rem auto;
-  background-color: unset;
+body .container h1 {
+  font-size: 4rem;
   color: white;
-}
-
-body .container .jumbotron h1 {
   font-family: "Dancing Script", cursive;
   text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898, -0.3rem 0.8rem 0.1rem #929191;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
-body .container .jumbotron h1 .glyphicon {
+body .container h1 .bi-list-ul {
   padding-right: 1rem;
-  font-size: 4rem;
+  vertical-align: middle;
   color: #27b3c2;
 }
 
-body .container .jumbotron h1 .accent {
+body .container h1 .accent {
   color: #27b3c2;
 }
 
@@ -46,12 +43,12 @@ body .container form .mb-3 {
 }
 
 body .container form .mb-3 .form-label {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Dancing Script", cursive;
 }
 
 body .container form .form-label {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Dancing Script", cursive;
 }
 
@@ -87,12 +84,11 @@ body .container form .btn:active {
 body .container .panel thead {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 162, 100, 0.8)), to(rgba(240, 119, 102, 0.8)));
   background: linear-gradient(top, rgba(246, 162, 100, 0.8), rgba(240, 119, 102, 0.8));
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: white;
 }
 
 body .container .panel tbody {
-  font-size: 1.3rem;
   background-color: #fcecdd;
 }
 

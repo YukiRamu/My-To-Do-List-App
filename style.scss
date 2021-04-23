@@ -18,28 +18,26 @@ body {
   .container {
     margin: 2rem auto;
     min-height: 100vh;
-    max-width: 90vw;
+    max-width: 80vw;
     background: linear-gradient(45deg, $bgColor1, $bgColor2);
     border-radius: 2vw;
     box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
     //header
-    .jumbotron {
-      padding: (1.5rem 1.5rem);
-      margin: 2rem auto;
-      background-color: unset;
+    h1 {
+      font-size: 4rem;
       color: $white;
-      h1 {
-        font-family: "Dancing Script", cursive;
-        text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898,
-          -0.3rem 0.8rem 0.1rem #929191;
-        .glyphicon {
-          padding-right: 1rem;
-          font-size: 4rem;
-          color: $color4;
-        }
-        .accent {
-          color: $color4;
-        }
+      font-family: "Dancing Script", cursive;
+      text-shadow: 0.1rem -0.1rem 0.1rem #e6dbe6, -0.1rem 0.2rem 0.1rem #737272, -0.2rem 0.6rem 0.1rem #9b9898,
+        -0.3rem 0.8rem 0.1rem #929191;
+      padding-top: 1rem;
+      padding-left: 1rem;
+      .bi-list-ul {
+        padding-right: 1rem;
+        vertical-align: middle;
+        color: $color4;
+      }
+      .accent {
+        color: $color4;
       }
     }
     //form
@@ -48,12 +46,12 @@ body {
       .mb-3 {
         margin-bottom: 0;
         .form-label {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-family: "Dancing Script", cursive;
         }
       }
       .form-label {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-family: "Dancing Script", cursive;
       }
       .alert {
@@ -82,11 +80,10 @@ body {
     .panel {
       thead {
         background: linear-gradient(top, $bgColor3, $bgColor4);
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: $white;
       }
       tbody {
-        font-size: 1.3rem;
         background-color: $color1;
         .delete {
           color: $color4;
