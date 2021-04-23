@@ -41,12 +41,16 @@ body .container form {
   margin: 1rem auto;
 }
 
-body .container form .form-group {
+body .container form .mb-3 {
   margin-bottom: 0;
 }
 
-body .container form .form-group .control-label,
-body .container form .form-group .form-label {
+body .container form .mb-3 .form-label {
+  font-size: 2.5rem;
+  font-family: "Dancing Script", cursive;
+}
+
+body .container form .form-label {
   font-size: 2.5rem;
   font-family: "Dancing Script", cursive;
 }
@@ -89,6 +93,7 @@ body .container .panel thead {
 
 body .container .panel tbody {
   font-size: 1.3rem;
+  background-color: #fcecdd;
 }
 
 body .container .panel tbody .delete {
