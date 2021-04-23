@@ -108,11 +108,11 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 
 // }
 
-addBtn.addEventListener("submit", (e) => {
-  alert("add button is clicked");
-  // e.preventDefault();  //************ for form tag in html to log the result in the console
+addBtn.addEventListener("click", (e) => {
+ 
+   //e.preventDefault();  //************ for form tag in html to log the result in the console
   //e.stopImmediatePropagation();
-
+  alert("add button is clicked");
   //validation check for user input
   if ((itemText.value === "") || (priority.value === "")) {
     alert("Input both to do item and priority");
