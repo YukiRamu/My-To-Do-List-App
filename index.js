@@ -20,7 +20,7 @@ class UI {
     this._itemArray = [];
   }
   //methods 
-  static displayItem = (itemObj) => {
+  static displayItem(itemObj) {
 
     //#1: get the data from localstorage and assign it to itemArray
     UI._itemArray = JSON.parse(localStorage.getItem("toDoItem"));
@@ -46,7 +46,7 @@ class UI {
   }
 
   //#2: create HTML
-  static createHTML = (itemArrayParam) => {
+  static createHTML(itemArrayParam) {
 
     //when the page is first loaded, no item is stored in the localStorage. itemArray is empty
     if (itemArrayParam.length !== 0) {
@@ -67,18 +67,18 @@ class UI {
   }
 
   //#3 store the itemArray to localStorage
-  static storeItem = (itemArray) => {
+  static storeItem(itemArray) {
     localStorage.setItem("toDoItem", JSON.stringify(itemArray));
   }
 
   //#4 clear user input fields
-  static clearInput = () => {
+  static clearInput() {
     itemText.value = "";
     priority.value = "";
   }
 
   //#5 delete item
-  static deleteItem = (target) => {
+  static deleteItem(target) {
 
     if (target.className.includes("delete")) {
       target.parentElement.parentElement.remove(); //Remove element from DOM
@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", UI.displayItem());
 // }
 
 addBtn.addEventListener("click", (e) => {
- 
-   //e.preventDefault();  //************ for form tag in html to log the result in the console
+
+  //e.preventDefault();  //************ for form tag in html to log the result in the console
   //e.stopImmediatePropagation();
   alert("add button is clicked");
   //validation check for user input
