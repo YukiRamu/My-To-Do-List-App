@@ -4,6 +4,7 @@ const itemText = document.getElementById("item");
 const priority = document.getElementById("priority");
 const addBtn = document.getElementById("add");
 const itemTable = document.getElementById("itemTable");
+const alert = document.querySelector(".alert");
 
 /* Class */
 //item
@@ -42,12 +43,10 @@ class UI {
       UI._itemArray.unshift(itemObj); // add a new item into itemArray
       UI.createHTML(UI._itemArray);
     }
-
   }
 
   //#2: create HTML
   static createHTML(itemArrayParam) {
-
     //when the page is first loaded, no item is stored in the localStorage. itemArray is empty
     if (itemArrayParam.length !== 0) {
       const html = itemArrayParam.map((elem) => {
@@ -63,7 +62,6 @@ class UI {
       itemTable.innerHTML = html;
       UI.storeItem(itemArrayParam);
     }
-
   }
 
   //#3 store the itemArray to localStorage
@@ -84,38 +82,29 @@ class UI {
       target.parentElement.parentElement.remove(); //Remove element from DOM
 
       const targetIndex = target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent - 1; //find the index of array (= item No.)
-      console.log("target index is ", targetIndex);
       UI._itemArray.splice(targetIndex, 1);//delete target from itemArray
-      console.log("UI._itemArray ", UI._itemArray)
 
       //reload the page to update item No.
       window.location.reload();
-
       UI.storeItem(UI._itemArray); //store the latest itemArray into localStorage
-
     }
   }
-
 }
 
 //When the window is loaded - > display current to do items
 document.addEventListener("DOMContentLoaded", UI.displayItem());
 
-//Add button - > display to do items
-
-// const test = () => {
-//   alert("Add button is clicked");
-
-// }
-
 addBtn.addEventListener("click", (e) => {
 
+  //clear alert if it is shown
+  if (alert.style.display = "block") {
+    alert.style.display = "none";
+  }
+
   //e.preventDefault();  //************ for form tag in html to log the result in the console
-  //e.stopImmediatePropagation();
-  alert("add button is clicked");
   //validation check for user input
   if ((itemText.value === "") || (priority.value === "")) {
-    alert("Input both to do item and priority");
+    alert.style.display = "block";
     //clear input
     UI.clearInput();
     return false;
@@ -128,7 +117,6 @@ addBtn.addEventListener("click", (e) => {
 
   //clear input
   UI.clearInput();
-
 });
 
 //Delete button - > delete the row

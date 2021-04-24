@@ -54,8 +54,9 @@ body .container form .form-label {
 
 body .container form .alert {
   display: none;
-  font-size: 1.3rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  margin-bottom: 0;
+  z-index: 1;
 }
 
 body .container form .btn {
@@ -68,13 +69,13 @@ body .container form .btn {
 }
 
 body .container form .btn:hover {
-  -webkit-transform: translateY(-0.5rem);
-          transform: translateY(-0.5rem);
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
 }
 
 body .container form .btn:active {
-  -webkit-transform: translateY(0.5rem);
-          transform: translateY(0.5rem);
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fc919f;
