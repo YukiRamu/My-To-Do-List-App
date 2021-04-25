@@ -29,8 +29,7 @@ class UI {
     /* ================== Exception Handling ================== */
     if ((UI._itemArray === null) && (itemObj === undefined)) {
       //case1: when the page is first loaded and no item is stored in the localStorage
-      UI._itemArray = Object.entries({}); //store empty array into the localStorage
-      localStorage.setItem("toDoItem", JSON.stringify(UI._itemArray));
+      localStorage.setItem("toDoItem", JSON.stringify(Object.entries([])));
     } else if ((UI._itemArray.length !== 0) && (itemObj === undefined)) {
       //case2: when the page is just refresed after one or more item is added
       UI.createHTML(UI._itemArray);
