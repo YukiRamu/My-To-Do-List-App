@@ -16,6 +16,7 @@ body .container {
 }
 
 body .container h1 {
+  display: block;
   font-size: 4rem;
   color: white;
   font-family: "Dancing Script", cursive;
@@ -39,7 +40,7 @@ body .container form {
 }
 
 body .container form .mb-3 {
-  margin-bottom: 0;
+  padding: 0 2rem;
 }
 
 body .container form .mb-3 .form-label {
@@ -47,20 +48,28 @@ body .container form .mb-3 .form-label {
   font-family: "Dancing Script", cursive;
 }
 
-body .container form .form-label {
+body .container form .priorityRow {
+  padding: 0 2rem;
+}
+
+body .container form .priorityRow .form-label {
   font-size: 2rem;
   font-family: "Dancing Script", cursive;
 }
 
-body .container form .alert {
-  display: none;
-  padding: 0.3rem;
-  margin-bottom: 0;
-  z-index: 1;
+body .container form .priorityRow .priority {
+  margin-left: 0;
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-body .container form .btn {
-  margin-top: 1rem;
+body .container form .priorityRow .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1rem;
   border: none;
   color: #fcecdd;
   -webkit-box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
@@ -68,18 +77,29 @@ body .container form .btn {
   background: #fc919f;
 }
 
-body .container form .btn:hover {
+body .container form .priorityRow .btn:hover {
   -webkit-transform: translateY(-0.3rem);
           transform: translateY(-0.3rem);
 }
 
-body .container form .btn:active {
+body .container form .priorityRow .btn:active {
   -webkit-transform: translateY(0.3rem);
           transform: translateY(0.3rem);
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fc919f;
   background-color: white;
+}
+
+body .container form .alert {
+  margin: 0 1rem;
+  display: none;
+  padding: 0.3rem;
+  z-index: 1;
+}
+
+body .container .panel {
+  padding: 1rem 2rem;
 }
 
 body .container .panel thead {

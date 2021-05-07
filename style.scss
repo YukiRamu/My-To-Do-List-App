@@ -24,6 +24,7 @@ body {
     box-shadow: 0 1rem 1rem 0rem rgba(61, 61, 61, 0.696);
     //header
     h1 {
+      display: block;
       font-size: 4rem;
       color: $white;
       font-family: "Dancing Script", cursive;
@@ -44,41 +45,52 @@ body {
     form {
       margin: 1rem auto;
       .mb-3 {
-        margin-bottom: 0;
+        padding: 0 2rem;
         .form-label {
           font-size: 2rem;
           font-family: "Dancing Script", cursive;
         }
       }
-      .form-label {
-        font-size: 2rem;
-        font-family: "Dancing Script", cursive;
+      .priorityRow {
+        padding: 0 2rem;
+        .form-label {
+          font-size: 2rem;
+          font-family: "Dancing Script", cursive;
+        }
+        .priority {
+          margin-left: 0;
+          width: 90%;
+          height: fit-content;
+        }
+        .btn {
+          width: fit-content;
+          margin-left: 1rem;
+          border: none;
+          color: $color1;
+          box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
+          background: $color2;
+          //font-family: "Dancing Script", cursive;
+          &:hover {
+            transform: translateY(-0.3rem);
+          }
+          &:active {
+            transform: translateY(0.3rem);
+            box-shadow: none;
+            color: $color2;
+            background-color: $white;
+          }
+        }
       }
       .alert {
+        margin: 0 1rem;
         display: none;
         padding: 0.3rem;
-        margin-bottom: 0;
         z-index: 1;
       }
-      .btn {
-        margin-top: 1rem;
-        border: none;
-        color: $color1;
-        box-shadow: 0 0.3rem 0.3rem 0 rgba(49, 49, 49, 0.696);
-        background: $color2;
-        //font-family: "Dancing Script", cursive;
-        &:hover {
-          transform: translateY(-0.3rem);
-        }
-        &:active {
-          transform: translateY(0.3rem);
-          box-shadow: none;
-          color: $color2;
-          background-color: $white;
-        }
-      }
+
     }
     .panel {
+      padding: 1rem 2rem;
       thead {
         background: linear-gradient(top, $bgColor3, $bgColor4);
         font-size: 1.3rem;
